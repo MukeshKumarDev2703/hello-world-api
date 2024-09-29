@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Define a route for the root URL ('/')
 app.get('/', (req, res) => {
-    res.send('Hello, World! I am Mukesh!');
+    res.send('Hello, World!');
 });
 
 // Start the server
