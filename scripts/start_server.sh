@@ -1,3 +1,6 @@
 #!/bin/bash
 cd /home/ec2-user/hello-world-api
-node app.js > /dev/null 2>&1 &
+sudo fuser -k 3000/tcp
+
+# Start the new version of the application
+nohup node app.js > app.log 2>&1 &
