@@ -3,7 +3,7 @@ const app = express();
 const PORT = 80;  // Application Run on PORT 80.
 
 app.get('/', (req, res) => {
-    res.send('Hello Simranpreet, Good job!');
+    res.send('Hello World!');
 });
 
 app.listen(PORT, () => {
