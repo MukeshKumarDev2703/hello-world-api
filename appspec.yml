@@ -2,11 +2,15 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/hello-world-api
-
+    destination: /var/www/hello-world-api
 hooks:
-  AfterInstall:
+  BeforeInstall:
+    - location: chmod +x /var/www/nodeapp/scripts/install_dependencies.sh
+    - location: chmod +x /var/www/nodeapp/scripts/start_server.sh
     - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: root
+    - location: scripts/start_server.sh
       timeout: 300
       runas: root
   ApplicationStart:
