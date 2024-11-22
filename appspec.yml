@@ -5,8 +5,8 @@ files:
     destination: /var/www/hello-world-api
 hooks:
   BeforeInstall:
-    - location: chmod +x /var/www/nodeapp/scripts/install_dependencies.sh
-    - location: chmod +x /var/www/nodeapp/scripts/start_server.sh
+    - location: chmod +x /var/www/hello-world-api/scripts/install_dependencies.sh
+    - location: chmod +x /var/www/hhello-world-api/scripts/start_server.sh
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
