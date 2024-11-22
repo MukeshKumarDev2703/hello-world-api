@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies for build..."
+      - npm install
+  build:
+    commands:
+      - echo "No specific build step required."
+  post_build:
+    commands:
+      - echo "Post-build step complete."
+artifacts:
+  files:
+    - app.js
+    - package.json
+    - appspec.yml
+    - scripts/*
+  discard-paths: no
