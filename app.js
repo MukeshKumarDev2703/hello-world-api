@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
-const PORT = 80;  // Application Run on PORT 80.
+const port = 3000;
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Hello World! This is a Node.js application deployed with CodePipeline.');
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(port, () => {
+    console.log(`App is running on http://localhost:${port}`);
 });
