@@ -1,6 +1,4 @@
 #!/bin/bash
-cd /var/www/hello-world-api
-sudo npm install#!/bin/bash
 
 # Navigate to the application directory
 cd /var/www/hello-world-api || { 
@@ -16,7 +14,7 @@ fi
 
 # Install dependencies
 echo "Installing dependencies..."
-sudo npm install
+npm install
 
 if [ $? -eq 0 ]; then
   echo "Dependencies installed successfully."
