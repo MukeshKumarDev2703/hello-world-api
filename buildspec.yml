@@ -11,10 +11,11 @@ phases:
   post_build:
     commands:
       - echo "Post-build step complete."
+
 artifacts:
   files:
     - app.js
     - package.json
     - appspec.yml
-    - scripts/*
+    - scripts/**
   discard-paths: no
